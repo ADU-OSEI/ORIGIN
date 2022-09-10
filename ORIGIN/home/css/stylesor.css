@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+.main-header-top{
+    border-style: solid;
+    border-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image:linear-gradient(gold,silver) ;
+
+    
+}
+.drawer-button {
+    height: calc(.1rem * 3 + .5rem * 2);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.drawer {
+    display: block;
+    position: relative;
+    width: 3rem;
+    height: .1rem;
+    background-color: rgb(167, 27, 27);
+    transition: background-color 400ms ease; 
+    margin: 1rem;
+}
+.drawer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgb(232, 11, 11);
+    height: 100%;
+    width: 100%;
+    top: -.5rem;
+    transition-property: background-color, transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease;
+}
+
+    .drawer::before
+,   .drawer::after {
+    
+    transition: width 500ms ease-in-out;
+    margin-top: -0.7rem;
+    margin-bottom: -0.7rem;
+}
+
+.drawer::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgb(150, 2, 2);
+    height: 100%;
+    width: 100%;
+    bottom: -.5rem;
+    right: 0;
+}
+
+.drawer-button:hover .drawer::before {
+    width: 50%;
+}
+
+.drawer-button:hover .drawer::after {
+    width: 50%;
+}
+
+.logoor {
+    animation-name: logoanimation;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.brand-name{
+    background-color: rgb(12, 104, 27);
+    font-size: 3rem;
+    width: fit-content;
+    color: white;
+    border-radius: 1rem;
+} 
+.brand-name:hover{
+    background-image:linear-gradient(rgb(120, 151, 33),rgb(171, 171, 68));
+    color: white;
+    width: fit-content;
+    font-size: 6rem;
+    border-radius: 3rem;
+    transition: 400ms ease-in-out ;
+    transition-timing-function: ease;
+    
+
+
+}
+.g:hover{
+       color: goldenrod;
+       paint-order: markers;
+
+}
+.l:hover{
+    background-color: rgb(7, 95, 7);
+    color: white;
+    font-family: calibri;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0.2rem;
+    padding: 1rem;
+    display: inline-block;
+    flex-direction: row;
+    border-radius: 250px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition-duration: 600ms;
+    
+}
+
+@keyframes logoanimation {
+    10% {transform: scale(0.5);}
+    5% {transform: scale(1.);}
+    102%{transform: scale(0.2);}
+    19%{transform: rotatex (2);}
+}
+
+
+.menu{
+    animation-name: menuanimation;
+    animation-duration: 112s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+     
+}
+@keyframes menuanimation{
+    10% {transform: scale(0.5);}
+    5% {transform: scale(1.);}
+    102%{transform: scale(0.2);}
+    19%{transform: rotatex (2);}
+}
+
+.main-banner{
+    padding-left: 2rem;
+}
+.brand-name{
+
+}
+.brand-moto{
+    
+}
+.top-links{
+
+}
+.nav{
+    display: none;
+}
+.l{
+    font-family: calibri;
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(237, 235, 235);
+    margin: 0.2rem;
+    padding: 1rem;
+    display: inline-block;
+    flex-direction: row;
+    border-radius: 250px;
+    text-decoration: none;
+    
+}
+.random-images{
+    display: inline-block;
+
+}
+.rg{
+    height: 18.5rem;
+    width: 18.5rem;
+    gap: 1rem;
+    box-shadow: .7rem;
+    border-style: solid;
+    border-color: rgb(238, 242, 245);
+    border-width: 3px;
+    border-radius: 1 rem;
+
+}
+.rg:hover{
+    background-color: #e19d59;
+
+}
+container-content,a{
+    text-decoration:none;
+    margin-left: 0.5rem;
+    font-family: arial;
+    font-weight: bold;
+    color: silver;
+    border-radius: 5rem;
+    gap: 1rem;
+
+}
+ul{
+ list-style: none;
+}
+.footer{
+    background-color: #170917;
+    color: silver;
+    
+}
+@media screen and (min-width: 750px){
+    .footer-container{
+        display: flex;
+        color: #e19d59;
+        gap: 6rem;
+        padding: 1rem;
+    }
+    .brand-name{
+        background-image:linear-gradient(rgb(33, 33, 151),
+        rgb(177, 177, 209));
+          color: white;
+          width: fit-content;
+          font-size: 6rem;
+          border-radius: 3rem;
+          transition: 400ms ease-in-out ;
+          transition-timing-function: ease;
+    }
+    }
